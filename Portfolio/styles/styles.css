@@ -1,0 +1,271 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("../assets/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+
+/* Nav Bar */
+.menu{
+    height: 30px;
+    float: right;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 0px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    display: none;
+}
+nav{
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    height: 70px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+nav ul{
+    margin: 20px 50px 20px 0px;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    margin: 0;
+    color: grey;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover{
+    color: white;
+}
+
+
+.portfolio{
+    padding: 0;
+    margin: 20px 0 20px 50px;
+    float: left;
+}
+
+
+/* Home Style */
+
+.home, #contact, #about, #education{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.intro,.social{
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.r-btn{
+    width: 150px;
+    margin: 10px;
+    font-size: large;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: 0.5s all;
+}
+
+.resume-button{
+    color: white;
+    background-color: transparent;
+}
+
+.about-button{
+    color: black;
+    background-color:rgb(160, 160, 223);
+}
+
+.r-btn:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+.resume-button:hover{
+    color: black;
+    background-color: white;
+    
+}
+
+.about-button:hover{
+    color: white;
+    background-color: blueviolet;
+}
+
+/* Social Style */
+
+.social{
+    margin: 10px;
+    font-size: 12px;
+    color: grey;
+}
+.social a img{
+    position: relative;
+    top: 0px;
+}
+.social a img:hover{
+    cursor: pointer;
+    top: -5px;
+}
+
+/* Project Section Style */
+.projects-detail{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 50px;
+}
+.project-card{
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid grey;
+    height: 450px;
+    width: 400px;
+    padding: 50px;
+    margin: 50px;
+}
+.project-card .disc{
+    color: grey;
+}
+
+
+/* About us Style */
+.about-us, .contact-detail, .education{
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid grey;
+    border-radius: 30px;
+}
+
+/* Contact Style */
+.contact-detail{
+    text-align: left;
+    align-items: left;
+    margin: 0;
+}
+
+.item{
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Education Style */
+.education{
+    text-align: left;
+    align-items: left;
+    margin: 0;
+}
+.education p{
+    color: grey;
+}
+
+.education .uni{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* Resume Style */
+#resume{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.pdf-resume img{
+    box-shadow: 5px 10px 4px grey;
+    margin: 10px;
+}
+
+
+/* media Query */
+
+@media (max-width: 1000px) {
+    .menu{
+        display: block;
+    }
+    #m1{
+        display: none;
+    }
+    .menu:checked ~ ul{
+        left: 0%;
+    }
+    nav ul {
+        z-index: 1;
+        position: fixed;
+        text-align: center;
+        width: 100%;
+        height: 60%;
+        top: 50px;
+        left: -100%;
+        transition: all .5s;
+        background-color: black;
+    }
+
+    nav ul li{
+        display: block;
+        line-height: 1.5;
+        padding: 10px;
+    }
+    .projects-detail{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .project-card{
+        margin: 10px 5px;
+        padding: 5px;
+        width: 300px;
+    }
+
+    .project-card img{
+        width: 300px;
+    }
+
+    .pdf-resume img{
+        width: 330px;
+    }
+
+    .about-us, .contact-detail, .education{
+        margin: 10px;
+        width: 200px;
+    }
+    .contact-detail .item{
+        font-size: 14px;
+    }
+}

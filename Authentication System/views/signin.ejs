@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <object type="image/svg+xml" data="./assets/Softsanc.svg" class="logo">
+        </object>
+        <form action="/signin" method="post" id="form1">
+            <h1>Sign in to Softsanc</h1>
+            <div class="space wrap">
+                <input class="inputfield" type="email" name="email" placeholder="Email" required autofocus>
+            </div>
+            <div class="space wrap">
+                <input class="inputfield" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="space">
+                <button class="btn" type="submit" form="form1">Sign in</button>
+            </div>
+        </form>
+        <form action="/signup" method="get" id="form2">
+            <p>Want to create accout?<span><button class="sign" type="submit" form="form2">Sign up</button></span></p>
+        </form>
+        <footer class="footer">© The Softsanc</footer>
+    </div>
+
+</body>
+
+</html>
